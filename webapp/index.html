@@ -23,24 +23,24 @@
             <div class="col-md-4">
 
                 <div class="item">
-                    <div class="item--title">fenster geschlossen</div>
+                    <div class="item--title"><img src="door.png" alt=""> Geschlossen</div>
                     <div class="item--value">{{ctrl.data.window | window:false}}</div>
                 </div>
                 <div class="item">
-                    <div class="item--title">fenster offen</div>
+                    <div class="item--title"><img src="door.png" alt=""> Offen</div>
                     <div class="item--value">{{ctrl.data.window | window:true}}</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="item">
-                    <div class="item--title">Waschmaschine</div>
-                    <div class="item--value">tbd</div>
+                    <div class="item--title"><img src="washer.png" alt=""> Waschmaschine</div>
+                    <div class="item--value">{{ctrl.data.plug.wash | plugStatus}}</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="item">
-                    <div class="item--title">Trockner</div>
-                    <div class="item--value">tbd</div>
+                    <div class="item--title"><img src="washer.png" alt=""> Trockner</div>
+                    <div class="item--value">{{ctrl.data.plug.dry | plugStatus}}</div>
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@ angular.module('had').controller('mainCtrl', function ($scope, $http, $interval)
 
       var vm = this, $handle = null, $checkEvery = 5, $checkIndex = 0;
       vm.progress = 0;
-      vm.data = [];
+      vm.data = {window:[], plug: []};
 
       /**
        * helper function for updating data
@@ -57,6 +57,13 @@ angular.module('had').filter('window', function () {
          }
       }
       return count;
+   }
+}).filter('plugStatus', function() {
+   return function(val) {
+       if (parseInt(val, 10) === 1) {
+           return "Läuft";
+       }
+       return "Gestoppt";
    }
 });
 

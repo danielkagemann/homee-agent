@@ -10,29 +10,19 @@ var $data = {window: {}};
 
 app.use(express.static('webapp'));
 
-/**
- * helper routine to convert 1, "1" or "open"
- * @param val
- * @returns {boolean}
- */
-function translate(val) {
-  if (val === undefined ||val == null) {
-    return false;
-  }
-  if (val === '1' || val === '1' || val === 'open' ||val === 'offen') {
-    return true;
-  }
-  return false;
-}
 
 app.get('/info', function (req, res) {
   res.json($data);
 });
 
 app.post('/window/:name/:status', function(req) {
-  console.log("params ", req.params);
-  $data.window[req.params.name] = translate(req.params.status);
+  $data.window[req.params.name] = req.params.status == "1" ? true : false;
 });
+app.post('/plug/:name/:status', function(req) {
+  $data.plug[req.params.name] = req.params.status == "1" ? true : false
+});
+
+
 
 app.listen(4080, function () {
 
