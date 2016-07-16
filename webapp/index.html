@@ -2,9 +2,24 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/basic.css">
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/angular-animate.min.js"></script>
     <title>HAD</title>
 </head>
-<body>
 
+<!-- main controller -->
+<body ng-app="had" ng-controller="mainCtrl as ctrl">
+
+<div id="home">
+    <div class="app--progress" style="width:{{ctrl.progress}}%"></div>
+    <div class="app--title">homee<br/>agent<br/>dashboard</div>
+</div>
+
+
+<script src="js/app.js"></script>
 </body>
 </html>

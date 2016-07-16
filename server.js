@@ -25,10 +25,8 @@ function translate(val) {
   return false;
 }
 
-app.get('/', function (req, res) {
-  res.send('hom.ee agent!');
-  console.info("root access");
-  // todo document possible http callbacks
+app.get('/info', function (req, res) {
+  res.json($data);
 });
 
 app.post('/window/:name/:status', function(req) {

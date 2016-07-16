@@ -15,7 +15,6 @@
   "author": "Daniel Kagemann",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "net-ping": "^1.2.0",
     "request": "^2.73.0"
