@@ -19,7 +19,7 @@ function translate(val) {
   if (val === undefined ||val == null) {
     return false;
   }
-  if (val === '1' || val === '1' ||val === 'open') {
+  if (val === '1' || val === '1' || val === 'open' ||val === 'offen') {
     return true;
   }
   return false;

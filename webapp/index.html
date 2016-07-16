@@ -16,7 +16,35 @@
 
 <div id="home">
     <div class="app--progress" style="width:{{ctrl.progress}}%"></div>
-    <div class="app--title">homee<br/>agent<br/>dashboard</div>
+
+    <div class="container-fluid">
+        <div class="app--title">homee<br/>agent<br/>dashboard</div>
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="item">
+                    <div class="item--title">fenster geschlossen</div>
+                    <div class="item--value">{{ctrl.data.window | window:false}}</div>
+                </div>
+                <div class="item">
+                    <div class="item--title">fenster offen</div>
+                    <div class="item--value">{{ctrl.data.window | window:true}}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="item">
+                    <div class="item--title">Waschmaschine</div>
+                    <div class="item--value">tbd</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="item">
+                    <div class="item--title">Trockner</div>
+                    <div class="item--value">tbd</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 

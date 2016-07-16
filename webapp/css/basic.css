@@ -13,7 +13,7 @@
     background-size:cover;
     background-position: center center;
     background-repeat:no-repeat;
-    padding:40px;
+    padding:20px;
 }
 
 .app--title {
@@ -21,6 +21,7 @@
     font-weight:100;
     color:#fff;
     line-height:0.9;
+    margin-bottom:40px;
 }
 
 .app--progress {
@@ -30,4 +31,28 @@
     width:0;
     height:10px;
     background-color:rgba(0,0,0,0.25);
+}
+
+.item {
+    background-color:rgba(0,0,0,0.25);
+    margin-bottom:2px;
+}
+.item:after {
+    content: " ";
+    clear:both;
+    display:block;
+}
+.item--title {
+    float:left;
+    font-weight:100;
+    text-transform: uppercase;
+    padding:10px;
+    color:#fff;
+}
+.item--value {
+    padding:10px;
+    float:right;
+    color:#fff;
+    font-weight:normal;
+    background-color:rgba(0,0,0,0.8);
 }

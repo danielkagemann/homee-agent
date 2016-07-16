@@ -10,4 +10,3 @@ Die Anwendung ist nun unter http://localhost:4080 erreichbar.
 ## Verwendete Resourcen
 
 * Hintergrundbild von https://unsplash.com
-* Icons von https://www.iconfinder.com/iconsets/architecture-interior
