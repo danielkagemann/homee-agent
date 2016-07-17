@@ -1,6 +1,7 @@
 # homee agent dashboard (HAD)
 
 Diese Anwendung sammelt Daten vom hom.ee die per webhook übermittelt wurde. Des weiteren wird eine Webanwendung zur Verfügung gestellt, die diese Daten visuell entsprechend aufbereitet.
+Die Anwendung kann durch Klick auf den Hintergrund in den Fullscreen Modus gesetzt werden.
 
 ## Einrichtung
 
@@ -32,3 +33,5 @@ http://<url>:<port>/plug/<name>/<status>
 * Wasser: Bildschirm bekommt blaues Overlay
 * Button für Abwesend machen (dann wird Haus unbeleuchtet)
     * im abwesenheitsstatus könnte einiges überwacht werden
+* openweather api
+

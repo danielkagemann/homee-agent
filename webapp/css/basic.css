@@ -1,5 +1,8 @@
 * {
-    font-family: 'Prompt', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #home {
@@ -17,6 +20,7 @@
 }
 
 .app--title {
+    font-family: 'Prompt', sans-serif;
     font-size:38px;
     font-weight:100;
     color:#fff;
@@ -38,9 +42,27 @@
     transition: all 0.3s ease-out;
 }
 
+.datetime {
+    position:absolute;
+    right:20px;
+    top:30px;
+    color:#fff;
+    text-align:right;
+    line-height:1.0;
+}
+
+.datetime--date {
+    font-size:12px;
+}
+.datetime--time {
+    font-size:24px;
+}
+
 .item {
-    background-color:rgba(0,0,0,0.25);
-    margin-bottom:2px;
+    background-color:rgba(220,220,220,0.15);
+    position:relative;
+    padding:20px;
+    min-height:90px;
 }
 .item:after {
     content: " ";
@@ -48,18 +70,27 @@
     display:block;
 }
 .item--title {
+    font-size:18px;
     float:left;
+    width:50%;
     font-weight:100;
-    text-transform: uppercase;
-    padding:10px;
     color:#fff;
+    text-align:right;
+    line-height:1.0;
+}
+.item--sub {
+    display:block;
+    text-transform: lowercase;
+    color:#ccc;
+    font-size:13px;
 }
 .item--value {
-    min-width:100px;
-    padding:10px;
+    font-size:13px;
+    font-weight:300;
     float:right;
-    color:#fff;
-    font-weight:normal;
-    background-color:rgba(0,0,0,0.5);
+    color:#ccc;
     text-align:right;
+}
+.item--value strong {
+    color:#fff;
 }
