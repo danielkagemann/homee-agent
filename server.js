@@ -6,7 +6,7 @@
 var express = require('express');
 var app = express();
 
-var $data = {window: {}};
+var $data = {window: {}, plug: {}};
 
 app.use(express.static('webapp'));
 
@@ -16,9 +16,11 @@ app.get('/info', function (req, res) {
 });
 
 app.post('/window/:name/:status', function(req) {
+  console.info("<- window ",req.params.name," ",req.params.status);
   $data.window[req.params.name] = req.params.status == "1" ? true : false;
 });
 app.post('/plug/:name/:status', function(req) {
+  console.info("<- plug ",req.params.name," ",req.params.status);
   $data.plug[req.params.name] = req.params.status == "1" ? true : false
 });
 

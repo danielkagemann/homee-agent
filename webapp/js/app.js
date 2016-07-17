@@ -60,7 +60,7 @@ angular.module('had').filter('window', function () {
    }
 }).filter('plugStatus', function() {
    return function(val) {
-       if (parseInt(val, 10) === 1) {
+       if (val) {
            return "Läuft";
        }
        return "Gestoppt";
