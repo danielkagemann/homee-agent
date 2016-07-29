@@ -33,5 +33,7 @@ http://<url>:<port>/plug/<name>/<status>
 * Wasser: Bildschirm bekommt blaues Overlay
 * Button für Abwesend machen (dann wird Haus unbeleuchtet)
     * im abwesenheitsstatus könnte einiges überwacht werden
-* openweather api
+* openweather api: http://openweathermap.org/appid
+    * icons http://erikflowers.github.io/weather-icons/
+    * example https://github.com/danielkagemann/daily
 
