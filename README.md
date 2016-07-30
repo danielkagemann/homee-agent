@@ -13,14 +13,14 @@ Die Anwendung ist nun unter http://localhost:4080 erreichbar.
 Das Homeegramm sollte an die Richtige URL geschickt werden. Die folgenden Requests sind verfügbar
 
 ### Fenster status
-http://<url>:<port>/window/<name>/<status>
+http://\<url\>:\<port\>/window/\<\name\\>/\<status>\
 
 <status> kann 1 für offen oder 0 für geschlossen sein
 
 ### Steckdose status
-http://<url>:<port>/plug/<name>/<status>
+http://\<url\>:\<port\>/plug/\<name\>/\<status\>
 
-<status> kann 1 für verbraucht strom oder 0 für verbraucht keinen strom sein
+\<status\> kann 1 für verbraucht strom oder 0 für verbraucht keinen strom sein
 
 ## Verwendete Resourcen
 

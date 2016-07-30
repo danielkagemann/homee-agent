@@ -22,7 +22,7 @@ angular.module('had')
                 if (list.hasOwnProperty(key)) {
                     if (list[key] === arg) {
                         if (label.length > 0) {
-                            label = ", ";
+                            label += ", ";
                         }
                         label += key;
                     }
