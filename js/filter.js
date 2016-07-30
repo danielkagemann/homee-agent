@@ -5,7 +5,6 @@ angular.module('had')
     .filter('windowStatus', function (){
         return function (list, arg){
             var count = 0;
-            arg = arg || false;
             for (var key in list) {
                 if (list.hasOwnProperty(key)) {
                     if (list[key] === arg) {
@@ -19,7 +18,6 @@ angular.module('had')
     .filter('windowLabel', function (){
         return function (list, arg){
             var label = "";
-            arg = arg || false;
             for (var key in list) {
                 if (list.hasOwnProperty(key)) {
                     if (list[key] === arg) {
