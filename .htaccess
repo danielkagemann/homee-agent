@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^info server.php?q=info [L]
+RewriteRule ^([^/]+)/([^/]+)/([^/]+) server.php?q=$1&name=$2&status=$3 [L]
