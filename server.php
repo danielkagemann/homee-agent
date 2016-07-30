@@ -1,9 +1,12 @@
 <?php
 
-$data = @unserialize(@file_get_contents('data.json'));
+$data = @unserialize(@file_get_contents('storage/data.json'));
+if ($data === FALSE) {
+    $data = array();
+}
 
 function T($m) {
-    $fp = fopen('had.log', 'at+');
+    $fp = fopen('storage/had.log', 'at+');
     if ($fp) {
         fwrite($fp, $m . "\n");
         fclose($fp);
@@ -24,5 +27,5 @@ if ($_REQUEST['q'] == 'info') {
     T('   status={$status}');
 
     $data[$area][$name] = $status == "1" ? true : false;
-    @file_put_contents('data.json', serialize($data));
+    @file_put_contents('storage/data.json', serialize($data));
 }
