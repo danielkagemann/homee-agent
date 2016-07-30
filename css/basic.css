@@ -18,6 +18,18 @@
     background-repeat:no-repeat;
     padding:20px;
 }
+#overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.4);
+}
+
+.content {
+    margin-top:100px;
+}
 
 .app--title {
     font-family: 'Prompt', sans-serif;
@@ -52,14 +64,14 @@
 }
 
 .datetime--date {
-    font-size:12px;
+    font-size:14px;
 }
 .datetime--time {
-    font-size:24px;
+    font-size:28px;
 }
 
 .item {
-    background-color:rgba(220,220,220,0.15);
+    background-color:rgba(220,220,220,0.25);
     position:relative;
     padding:20px;
     min-height:90px;
@@ -70,7 +82,7 @@
     display:block;
 }
 .item--title {
-    font-size:18px;
+    font-size:22px;
     float:left;
     width:50%;
     font-weight:100;
@@ -85,7 +97,7 @@
     font-size:13px;
 }
 .item--value {
-    font-size:13px;
+    font-size:15px;
     font-weight:300;
     float:right;
     color:#ccc;

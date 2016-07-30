@@ -16,6 +16,7 @@
 <body ng-app="had" ng-controller="mainCtrl as ctrl" ng-click="ctrl.fullscreen()">
 
 <div id="home">
+    <div id="overlay"></div>
     <div class="app--progress" style="width:{{ctrl.progress}}%"></div>
 
     <div class="datetime">
@@ -25,30 +26,35 @@
     <div class="container-fluid">
         <div class="app--title">homee<br/>agent<br/>dashboard</div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div class="item">
-                    <div class="item--title">Fenster
-                        <div class="item--sub">{{ctrl.data.window | windowLabel:true}}</div>
+        <div class="content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="item--title">Fenster
+                            <div class="item--sub">{{ctrl.data.window | windowLabel:true}}</div>
+                        </div>
+                        <div class="item--value">offen: <strong>{{ctrl.data.window |windowStatus:true}}</strong><br/>geschlossen:
+                            <strong>{{ctrl.data.window |windowStatus:false}}</strong>
+                        </div>
                     </div>
-                    <div class="item--value">offen: <strong>{{ctrl.data.window |windowStatus:true}}</strong><br/>geschlossen:
-                        <strong>{{ctrl.data.window |windowStatus:false}}</strong>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="item--title">Waschmaschine
+                            <div class="item--sub">technik</div>
+                        </div>
+                        <div class="item--value"><strong>{{ctrl.data.plug.wash | plugStatus}}</strong></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="item--title">Trockner
+                            <div class="item--sub">technik</div>
+                        </div>
+                        <div class="item--value"><strong>{{ctrl.data.plug.dry | plugStatus}}</strong></div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="item">
-                    <div class="item--title">Waschmaschine <div class="item--sub">technik</div></div>
-                    <div class="item--value"><strong>{{ctrl.data.plug.wash | plugStatus}}</strong></div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="item">
-                    <div class="item--title">Trockner <div class="item--sub">technik</div></div>
-                    <div class="item--value"><strong>{{ctrl.data.plug.dry | plugStatus}}</strong></div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
