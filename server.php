@@ -29,6 +29,9 @@ function getWeather() {
         if ($httpcode>= 200 && $httpcode < 300) {
 
         }
+        echo json_encode($response);
+    } else {
+        echo "{error: 'no information'}";
     }
 }
 
