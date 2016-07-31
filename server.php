@@ -1,6 +1,6 @@
 <?php
 
-require_once('weatherconfig.inc');
+include('/weatherconfig.inc');
 
 $data = @unserialize(@file_get_contents('storage/data.json'));
 if ($data === FALSE) {
