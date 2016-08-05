@@ -24,7 +24,7 @@
     left:0;
     width:100%;
     height:100%;
-    background-color:rgba(0,0,0,0.4);
+    background-color:rgba(0,0,0,0.6);
 }
 
 .content {
@@ -71,7 +71,7 @@
 }
 
 .item {
-    background-color:rgba(220,220,220,0.25);
+    background-color:rgba(220,220,220,0.15);
     position:relative;
     padding:20px;
     min-height:90px;
