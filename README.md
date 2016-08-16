@@ -5,8 +5,10 @@ Die Anwendung kann durch Klick auf den Hintergrund in den Fullscreen Modus geset
 
 ## Einrichtung
 
-Mit *npm install* werden alle benötigten Module installiert. Zum starten des Servers *npm start* eingeben.
-Die Anwendung ist nun unter http://localhost:4080 erreichbar.
+Es wird ein Webserver mit PHP Unterstützung benötigt.
+Alle Dateien in das document root Verzeichnis kopieren. 
+
+Ein Verzeichnis *storage* anlegen und alle Rechte geben. 
 
 ## Homeegramme einrichten
 
