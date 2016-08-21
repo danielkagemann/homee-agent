@@ -5,24 +5,55 @@ Die Anwendung kann durch Klick auf den Hintergrund in den Fullscreen Modus geset
 
 ## Einrichtung
 
-Es wird ein Webserver mit PHP Unterstützung benötigt.
-Alle Dateien in das document root Verzeichnis kopieren. 
+Es wird ein Webserver mit PHP Unterstützung benötigt. Ich verwende auf dem Raspberry Pi nginx als Webserver. 
+EIne gute Anleitung hierfür gibt es [hier](https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md)
+Alle Dateien in das document root Verzeichnis kopieren. In meinem Setup liegen die Dateien unter */var/www/html*
 
 Ein Verzeichnis *storage* anlegen und alle Rechte geben. 
 
+* mkdir storage  
+* hmod 0777 storage
+
 ## Homeegramme einrichten
 
-Das Homeegramm sollte an die Richtige URL geschickt werden. Die folgenden Requests sind verfügbar
+Die Anwendung bietet die folgenden Requests an.
 
-### Fenster status
-http://\<url\>:\<port\>/window/\<\name\\>/\<status>\
+server.php?**q**=*bereich*&**name**=*displayname*&**status**=*0 oder 1*
 
-<status> kann 1 für offen oder 0 für geschlossen sein
+Derzeit wrd für Bereich
 
-### Steckdose status
-http://\<url\>:\<port\>/plug/\<name\>/\<status\>
+* window
+* plug
+* info (dies wird vom UI verwendet um den Status zu erfragen)
+ 
+unterstützt.
 
-\<status\> kann 1 für verbraucht strom oder 0 für verbraucht keinen strom sein
+Damit man nicht immer eine lange URL im Homeegramm eingeben muss, kann man im Webserver eine Rewrite Regel definieren.
+
+Beispiel für Fenster Homeegramm (wird geschlossen)
+1. Neues Homegramm anlegen
+2. Wenn Gerät *Sensor-vom-Fenster* Zustand: wird geschlossen
+3. Aktion Webhook
+   * url: http://**url-vom-raspberry-pi**/server.php?q=window&name=Badezimmer&status=0
+   * Methode: POST
+
+Anstelle von name=Badezimmer einfach entsprechend abändern.
+
+## URL anpassen
+
+Die URL ist recht lang und nicht schön und kann über rewrite Regeln geändert werden. Wie gesagt verwende ich nginx als Webserver.
+Im Verzeichnis **/etc/nginx/sites-available** die Datei **default** bearbeiten.
+
+Im Bereich server {} die Zeilen wie folgt einfügen:
+
+   location /info {
+    		try_files $uri $uri/ /server.php?q=info;
+	}
+	rewrite /window/([^\/]+)/([^\/]+) /server.php?q=window&name=$1&status=$2;
+	rewrite /plug/([^\/]+)/([^\/]+) /server.php?q=plug&name=$1&status=$2;
+
+
+
 
 ## Verwendete Resourcen
 
