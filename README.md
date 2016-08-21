@@ -46,13 +46,17 @@ Im Verzeichnis **/etc/nginx/sites-available** die Datei **default** bearbeiten.
 
 Im Bereich server {} die Zeilen wie folgt einfügen:
 
-   location /info {
+
+	location /info {
     		try_files $uri $uri/ /server.php?q=info;
 	}
 	rewrite /window/([^\/]+)/([^\/]+) /server.php?q=window&name=$1&status=$2;
 	rewrite /plug/([^\/]+)/([^\/]+) /server.php?q=plug&name=$1&status=$2;
 
 
+Mit den obigen Regeln kann nun im Homeegramm die URL wie folgt geschrieben werden.
+
+	http://*url-vom-raspberrypi/window/badezimmer/1
 
 
 ## Verwendete Resourcen
