@@ -12,7 +12,7 @@ angular.module('had').controller('mainCtrl', function ($scope, $http, $interval,
          * helper function for updating data
          */
         function $render(){
-            $http.get('info').then(function (response){
+            $http.get('server.php?q=info').then(function (response){
                 vm.data = response.data;
             });
         }
