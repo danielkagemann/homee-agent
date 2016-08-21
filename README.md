@@ -56,7 +56,7 @@ Im Bereich server {} die Zeilen wie folgt einfügen:
 
 Mit den obigen Regeln kann nun im Homeegramm die URL wie folgt geschrieben werden.
 
-	http://*url-vom-raspberrypi/window/badezimmer/1
+	http://*url-vom-raspberrypi*/window/badezimmer/1
 
 
 ## Verwendete Resourcen
