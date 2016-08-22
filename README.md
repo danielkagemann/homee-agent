@@ -12,7 +12,7 @@ Alle Dateien in das document root Verzeichnis kopieren. In meinem Setup liegen d
 Ein Verzeichnis *storage* anlegen und alle Rechte geben. 
 
 * mkdir storage  
-* hmod 0777 storage
+* chmod 0777 storage
 
 ## Homeegramme einrichten
 
